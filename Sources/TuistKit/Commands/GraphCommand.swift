@@ -57,7 +57,7 @@ struct GraphCommand: AsyncParsableCommand, HasTrackableParameters {
     )
     var outputPath: String?
 
-    func runAsync() async throws {
+    func run() async throws {
         GraphCommand.analyticsDelegate?.willRun(withParameters: [
             "format": format.rawValue,
             "algorithm": layoutAlgorithm.rawValue,

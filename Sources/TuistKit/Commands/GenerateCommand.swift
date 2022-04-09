@@ -50,7 +50,7 @@ struct GenerateCommand: AsyncParsableCommand, HasTrackableParameters {
     )
     var ignoreCache: Bool = false
 
-    func runAsync() async throws {
+    func run() async throws {
         GenerateCommand.analyticsDelegate?.willRun(withParameters: [
             "no_open": String(noOpen),
             "xcframeworks": String(xcframeworks),
